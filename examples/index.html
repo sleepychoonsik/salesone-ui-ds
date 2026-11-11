@@ -1,0 +1,57 @@
+<!doctype html><html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>세일즈원 자동화 UI</title>
+<link rel="stylesheet" href="../dist/salesone-ui.css">
+<style>body{margin:0;padding:32px 24px;background:var(--bg-secondary);font-family:var(--font-sans);color:var(--fg)}h1{font-size:28px;margin:0 0 4px}p.lead{color:var(--fg-tertiary);margin:0 0 24px}
+section{background:var(--bg);border-radius:16px;padding:20px;margin:0 0 16px;max-width:960px}h2{font-size:15px;margin:0 0 14px}h2 small{font-weight:400;color:var(--fg-tertiary);margin-left:6px}
+.col{display:flex;flex-direction:column;gap:12px;max-width:452px}.row{display:flex;gap:8px;flex-wrap:wrap;align-items:center}</style></head>
+<body><h1>세일즈원 자동화 UI</h1><p class="lead">n세일즈원 자동화 패널 공통 디자인 시스템 · Montage 토큰 · GS SHOP 블루 #0088FF · Pretendard</p>
+<section><h2>Panel <small>떠 있는 북마클릿 패널의 틀</small></h2>
+<div class="so-panel" style="height:380px">
+ <div class="so-panel__head"><div class="so-panel__title"><span class="so-panel__dot"></span>재고동기화<span class="so-chip">v1.0</span><span class="so-chip so-chip--neutral">SJ와니 · AM</span></div>
+  <button class="so-icon-btn" title="접기">–</button><button class="so-icon-btn" title="닫기">×</button></div>
+ <div class="so-panel__body">
+  <button class="so-btn so-btn--md so-btn--primary so-btn--full">대상 추출하고 변경안 보기</button>
+  <div class="so-msg so-msg--info"><span class="so-msg__icon">i</span><div class="so-msg__body"><strong class="so-msg__title">세일즈원 로그인 상태에서 바로 실행돼요</strong>저장은 ③에서 확인한 뒤에만 해요.</div></div>
+  <details class="so-log" open><summary>진행 로그</summary><div class="so-log__box">10:02:11 직매입 재고/평가감 현황으로 이동
+10:02:47 전체 20,827건 → 대상 상품코드 86개</div></details>
+  <div class="so-panel__foot"><button class="so-btn so-btn--xs so-btn--text">보고 복사</button><button class="so-btn so-btn--xs so-btn--assistive">진단 내용 복사</button></div>
+ </div></div>
+</section><section><h2>Steps <small>4단계 진행 표시</small></h2>
+<div style="max-width:416px"><div class="so-steps"><div class="so-step so-step--done">1. 대상 추출</div><div class="so-step so-step--done">2. 변경안</div><div class="so-step so-step--current">3. 저장</div><div class="so-step">4. 점검</div></div></div>
+</section><section><h2>Button <small>medium·small·xsmall, primary·outlined·assistive·text</small></h2>
+<div class="col">
+ <button class="so-btn so-btn--md so-btn--primary so-btn--full">대상 추출하고 변경안 보기</button>
+ <div class="row"><button class="so-btn so-btn--sm so-btn--primary">③ 저장</button><button class="so-btn so-btn--sm so-btn--outlined">④ 점검</button><button class="so-btn so-btn--sm so-btn--assistive">취소</button><button class="so-btn so-btn--sm so-btn--primary" disabled>저장</button><button class="so-btn so-btn--sm so-btn--outlined"><span class="so-spinner"></span>조회 중</button></div>
+ <div class="row"><button class="so-btn so-btn--xs so-btn--text">보고 복사</button><button class="so-btn so-btn--xs so-btn--text">CSV 저장</button><button class="so-btn so-btn--xs so-btn--assistive">진단 내용 복사</button></div>
+</div>
+</section><section><h2>Checkbox <small>20px · radius-5 · brand 채움</small></h2>
+<div class="row" style="gap:16px">
+ <label class="row" style="gap:8px;font-size:13px"><input type="checkbox" class="so-checkbox"> 해제</label>
+ <label class="row" style="gap:8px;font-size:13px"><input type="checkbox" class="so-checkbox" checked> 선택</label>
+ <label class="row" style="gap:8px;font-size:13px;color:var(--fg-tertiary)"><input type="checkbox" class="so-checkbox" disabled> 비활성</label>
+</div>
+</section><section><h2>SectionMessage <small>안내·성공·주의·오류, 패널 안 확인창</small></h2>
+<div class="col">
+ <div class="so-msg so-msg--info"><span class="so-msg__icon">?</span><div class="so-msg__body"><strong class="so-msg__title">세일즈원에 저장할까요?</strong>수량 갱신 22건 · 일시품절 전환 0건<div class="so-msg__actions"><button class="so-btn so-btn--sm so-btn--primary">저장</button><button class="so-btn so-btn--sm so-btn--assistive">취소</button></div></div></div>
+ <div class="so-msg so-msg--positive"><span class="so-msg__icon">✓</span><div class="so-msg__body"><strong class="so-msg__title">점검 이상 없음</strong>미반영 0 · 남은 불일치 0</div></div>
+ <div class="so-msg so-msg--caution"><span class="so-msg__icon">!</span><div class="so-msg__body"><strong class="so-msg__title">상품코드 다건조회 아이콘을 찾지 못했어요</strong>세일즈원 화면에서 직접 처리한 뒤 [계속]을 눌러주세요.<div class="so-msg__actions"><button class="so-btn so-btn--sm so-btn--primary">계속</button><button class="so-btn so-btn--sm so-btn--assistive">중단</button></div></div></div>
+ <div class="so-msg so-msg--negative"><span class="so-msg__icon">!</span><div class="so-msg__body"><strong class="so-msg__title">멈췄어요</strong>예상 못한 팝업: 선택된 저장할 상품이 존재하지 않습니다.</div></div>
+</div>
+</section><section><h2>StatCard <small>요약 숫자 4칸</small></h2>
+<div style="max-width:416px"><div class="so-stats">
+ <div class="so-stat"><div class="so-stat__label">대상 상품</div><div class="so-stat__value">86</div></div>
+ <div class="so-stat so-stat--brand"><div class="so-stat__label">수량 갱신</div><div class="so-stat__value">22</div></div>
+ <div class="so-stat so-stat--brand"><div class="so-stat__label">일시품절</div><div class="so-stat__value">0</div></div>
+ <div class="so-stat"><div class="so-stat__label">재고있는 중지</div><div class="so-stat__value">5</div></div>
+</div></div>
+</section><section><h2>SectionHead <small>표 위 제목 + 건수 + 빠른 동작</small></h2>
+<div style="max-width:416px"><div class="so-section-head">재고 있는데 판매종료·일시품절 <span class="so-section-head__count">5</span><span class="so-section-head__spacer"></span><button class="so-btn so-btn--xs so-btn--text">일시품절만</button><button class="so-btn so-btn--xs so-btn--text">전체</button><button class="so-btn so-btn--xs so-btn--text">해제</button></div></div>
+</section><section><h2>DataTable <small>변경안·대상 목록 표</small></h2>
+<div style="max-width:416px"><div class="so-table-wrap"><table class="so-table">
+ <tr><th>상품</th><th>속성</th><th style="text-align:right">전체주문가능</th><th>판매상태</th></tr>
+ <tr><td>1130692453<span class="so-sub">SJ WANI 퀼티드 와이드 팬츠 1종</span></td><td>블랙/55</td><td class="so-num">772 → <span class="so-up">810</span></td><td><span class="so-tag so-tag--on">판매중</span></td></tr>
+ <tr><td>1131694825<span class="so-sub">SJ WANI 퀼팅 랩 팬츠 1종</span></td><td>블랙/66</td><td class="so-num">23 → <span class="so-down">22</span></td><td><span class="so-tag so-tag--on">판매중</span></td></tr>
+ <tr class="is-selected"><td>1091393005<span class="so-sub">SJ WANI 구스다운코트 1종</span></td><td>크림/55</td><td class="so-num">1</td><td><span class="so-tag so-tag--paused">일시품절</span></td></tr>
+</table></div></div>
+</section><section><h2>Tag <small>판매상태 표시</small></h2>
+<div class="row"><span class="so-tag so-tag--on">판매중</span><span class="so-tag so-tag--paused">일시품절</span><span class="so-tag so-tag--ended">판매종료</span><span class="so-tag so-tag--error">미반영</span><span class="so-chip">v1.0</span><span class="so-chip so-chip--neutral">SJ와니 · AM</span></div>
+</section></body></html>
